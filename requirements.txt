@@ -1,0 +1,11 @@
+streamlit
+numpy
+pandas
+requests
+fake-useragent
+htbuilder
+sklearn
+flask
+matplotlib
+gunicorn
+seaborn
