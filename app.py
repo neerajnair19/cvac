@@ -4,7 +4,6 @@ import numpy as np
 import requests
 import pandas as pd
 import streamlit as st
-
 from copy import deepcopy
 from fake_useragent import UserAgent
 from footer_utils import image, link, layout, footer
