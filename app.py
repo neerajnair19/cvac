@@ -1,5 +1,6 @@
 import datetime
 import json
+import httpx
 import numpy as np
 import requests
 import pandas as pd
