@@ -80,12 +80,12 @@ date_str = [x.strftime("%d-%m-%Y") for x in date_list]
 
 temp_user_agent = UserAgent()
 browser_header = {'User-Agent': temp_user_agent.random}
-
+headerss = {"Accept-Language": "hi_IN", "user-agent": "insomnia/2021.2.2"}
 final_df = None
 for INP_DATE in date_str:
     URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByDistrict?district_id={}&date={}".format(DIST_ID, INP_DATE)
     #response = httpx.get(URL, headers = browser_header)
-    response = requests.get(URL, headers=browser_header)
+    response = requests.get(URL, headers=headerss)
     if (response.ok) and ('centers' in json.loads(response.text)):
         resp_json = json.loads(response.text)['centers']
         if resp_json is not None:
